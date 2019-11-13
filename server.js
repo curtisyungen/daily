@@ -5,14 +5,21 @@ const app = express();
 
 app.use(cors());
 
-app.get("/api/days", (req, res) => {
-  const days = [
-    { id: 1, complete: false },
-    { id: 2, complete: false },
-    { id: 3, complete: false }
+app.get("/api/streaks", (req, res) => {
+  const streaks = [
+    {
+      id: 1,
+      title: "Streak 1",
+      days: [0, 0, 1, 1, 1]
+    },
+    {
+      id: 2,
+      title: "Streak 2",
+      days: [1, 1, 1, 1, 1]
+    }
   ];
 
-  res.json(days);
+  res.json(streaks);
 });
 
 const PORT = process.env.PORT || 6000;

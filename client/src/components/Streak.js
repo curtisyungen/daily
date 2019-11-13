@@ -1,27 +1,15 @@
-import React, { Component, Fragment } from "react";
-import Day from "./Day";
+import React, { Component } from "react";
+import "./Streak.css";
 
 class Streak extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      days: []
-    };
-  }
-
-  componentDidMount = () => {
-    fetch("/api/days")
-      .then(res => res.json())
-      .then(days => this.setState({ days }));
-  };
-
   render() {
+    const { id, title, days } = this.props.streak;
     return (
-      <Fragment>
-        {this.state.days.map(day => (
-          <Day key={day.id} day={day} />
-        ))}
-      </Fragment>
+      <div className="streak">
+        <p>{id}</p>
+        <p>{title}</p>
+        <p>{days}</p>
+      </div>
     );
   }
 }
