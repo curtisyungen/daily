@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Streak from "./Streak";
+import "./StreakList.css";
 
 class StreakList extends Component {
   constructor(props) {
@@ -21,11 +22,11 @@ class StreakList extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div className="streaklist">
         {this.state.streaks.map(streak => (
           <Streak streak={streak} />
         ))}
-      </Fragment>
+      </div>
     );
   }
 }

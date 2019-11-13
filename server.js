@@ -10,7 +10,16 @@ app.get("/api/streaks", (req, res) => {
     {
       id: 1,
       title: "Streak 1",
-      days: [0, 0, 1, 1, 1]
+      days: [
+        {
+          date: "11/01/2019",
+          complete: false
+        },
+        {
+          date: "11/02/2019",
+          complete: true
+        }
+      ]
     },
     {
       id: 2,

@@ -1,0 +1,10 @@
+.complete {
+  background: lightgreen !important;
+}
+
+.day {
+  background: #fcfcfc;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}

@@ -1,0 +1,5 @@
+.streaklist {
+  display: block;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
