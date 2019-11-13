@@ -10,14 +10,16 @@ class Streak extends Component {
   }
 
   componentDidMount = () => {
-    fetch("/api/days").then(res => console.log(res));
+    fetch("/api/days")
+      .then(res => res.json())
+      .then(days => this.setState({ days }));
   };
 
   render() {
     return (
       <Fragment>
         {this.state.days.map(day => (
-          <Day day={day} />
+          <Day key={day.id} day={day} />
         ))}
       </Fragment>
     );
